@@ -24,7 +24,6 @@ const { SECRET_KEY } = require("../config");
             await User.updateLoginTimestamp(username);
             // login successfully, send the token
             const token = jwt.sign({ username }, SECRET_KEY);
-            console.log("success")
             return res.json({ token });
         }
 
